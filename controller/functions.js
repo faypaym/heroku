@@ -4,7 +4,7 @@ const admin = require('firebase-admin');
 
 
 
-var serviceAccount = require("./anniv-app-f859f-firebase-adminsdk-ws4v8-00e0b25aa5.json");
+var serviceAccount = require("./../secret/anniv-app-f859f-firebase-adminsdk-ws4v8-00e0b25aa5.json");
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
   databaseURL: "https://anniv-app-f859f-default-rtdb.firebaseio.com/"

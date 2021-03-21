@@ -31,10 +31,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 
-
-
-app.get('/t', (res,req) =>{
-    render('pages/index', { title: 'yesyes' });
+app.get('/t', (req,res) =>{
+    res.render('pages/index', { title: 'yesyes' });
 });
 
 

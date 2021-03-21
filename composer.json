@@ -1,0 +1,15 @@
+{
+    "name": "lesva/heroku",
+    "license": "GNU",
+    "authors": [
+        {
+            "name": "faypaym",
+            "email": "benoit.vandamme@laposte.net"
+        }
+    ],
+    "require": {
+        "kreait/firebase-php": "^5.16",
+        "php": ">= 7.4.5"
+
+    }
+}

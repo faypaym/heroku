@@ -1,5 +1,4 @@
 
-
 const admin = require('firebase-admin');
 
 
@@ -10,20 +9,18 @@ admin.initializeApp({
   databaseURL: "https://anniv-app-f859f-default-rtdb.firebaseio.com/"
 });
 
-
-
-
-
 const db = admin.firestore();
 
 
-function getQuote() {
-  const quoteData = {
-  quote: "random5",
-  author: "String"
+
+function insert($id,$nom,$date,$cadeau) {
+  const params = {
+  date: $date,
+  cadeau: $cadeau
   };
-  return db.collection("sampleData").doc("inspiration").set(quoteData).then(() => {
-  console.log("new quote was written to the database");})
-  }
-  
-  getQuote();
+  return db.collection($id).doc($nom).set(params).then(() => {
+  console.log("new people was written to the database");})
+}
+
+
+exports.insert = insert;
